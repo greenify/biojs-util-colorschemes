@@ -1,0 +1,24 @@
+{
+  "name": "biojs-vis-colorschmes",
+  "version": "1.0.0",
+  "description": "Color schemes for residues",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greenify/biojs-vis-colorschemes"
+  },
+  "keywords": [
+    "biojs",
+    "color",
+    "schemes"
+  ],
+  "author": "greenify",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/greenify/biojs-vis-colorschemes/issues"
+  },
+  "homepage": "https://github.com/greenify/biojs-vis-colorschemes"
+}
