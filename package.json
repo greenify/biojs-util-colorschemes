@@ -1,5 +1,5 @@
 {
-  "name": "biojs-vis-colorschmes",
+  "name": "biojs-vis-colorschemes",
   "version": "1.0.0",
   "description": "Color schemes for residues",
   "main": "index.js",
