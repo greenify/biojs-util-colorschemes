@@ -1,56 +1,43 @@
-var Buried, Cinema, Clustal, Clustal2, Colors, Helix, Hydro, Lesk, Mae, Nucleotide, Purine, Strand, Taylor, Turn, Zappo;
-
-Taylor = require("./taylor");
-
-Zappo = require("./zappo");
-
-Hydro = require("./hydrophobicity");
-
-Clustal = require("./clustal");
-
-Clustal2 = require("./clustal2");
-
-Buried = require("./buried");
-
-Cinema = require("./cinema");
-
-Nucleotide = require("./nucleotide");
-
-Helix = require("./helix");
-
-Lesk = require("./lesk");
-
-Mae = require("./mae");
-
-Purine = require("./purine");
-
-Strand = require("./strand");
-
-Turn = require("./turn");
+var Buried = require("./buried");
+var Cinema = require("./cinema");
+var Clustal = require("./clustal");
+var Clustal2 = require("./clustal2");
+var Helix = require("./helix");
+var Hydro = require("./hydrophobicity");
+var Lesk = require("./lesk");
+var Mae = require("./mae");
+var Nucleotide = require("./nucleotide");
+var Purine = require("./purine");
+var Strand = require("./strand");
+var Taylor = require("./taylor");
+var Turn = require("./turn");
+var Zappo = require("./zappo");
 
 module.exports = Colors = {
   mapping: {
-    taylor: Taylor,
-    zappo: Zappo,
-    hydro: Hydro,
-    clustal: Clustal,
-    clustal2: Clustal2,
     buried: Buried,
+    buried_index: Buried,
     cinema: Cinema,
-    nucleotide: Nucleotide,
+    clustal2: Clustal2,
+    clustal: Clustal,
     helix: Helix,
+    helix_propensity: Helix,
+    hydro: Hydro,
     lesk: Lesk,
     mae: Mae,
+    nucleotide: Nucleotide,
     purine: Purine,
+    purine_pyrimidine: Purine,
     strand: Strand,
-    turn: Turn
+    strand_propensity: Strand,
+    taylor: Taylor,
+    turn: Turn,
+    turn_propensity: Turn,
+    zappo: Zappo,
   },
-  getColor: function(g) {
-    var color, scheme;
-    scheme = g.colorscheme.get("scheme");
-    color = Colors.mapping[scheme];
-    if (color === void 0) {
-      console.log("warning. no color scheme found.");
+  getColor: function(scheme) {
+    var color = Colors.mapping[scheme];
+    if (color === undefined) {
       color = {};
     }
     return color;
