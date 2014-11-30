@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/greenify/biojs-util-colorschemes",
   "devDependencies": {
+    "chai": "^1.10.0",
     "gulp": "^3.8.10",
     "gulp-mocha": "^2.0.0",
     "mocha": "^2.0.1"
