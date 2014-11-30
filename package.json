@@ -2,7 +2,7 @@
   "name": "biojs-util-colorschemes",
   "version": "1.0.2",
   "description": "Color schemes for residues",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/greenify/biojs-util-colorschemes/issues"
   },
-  "homepage": "https://github.com/greenify/biojs-util-colorschemes"
+  "homepage": "https://github.com/greenify/biojs-util-colorschemes",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-mocha": "^2.0.0",
+    "mocha": "^2.0.1"
+  }
 }
