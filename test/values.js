@@ -12,7 +12,7 @@ console.log(Clustal.getColor("B"))
 
 // Add your own scheme
 
-schemeMgr.addStaticScheme({B: "#bbb"},"bscheme")
+schemeMgr.addStaticScheme("bscheme", {B: "#bbb"})
 console.log(schemeMgr.getScheme("bscheme").getColor("B"))
 
 
@@ -22,7 +22,7 @@ console.log(schemeMgr.getScheme("bscheme").getColor("B"))
 var fun = function(letter,info){
   return info.pos % 2 == 0 ? "#ccc" : "#ddd";
 }
-schemeMgr.addDynScheme(fun,"fscheme")
+schemeMgr.addDynScheme("fscheme",fun)
 
 var scheme = schemeMgr.getScheme("dscheme")
 console.log(scheme.type)

@@ -64,11 +64,11 @@ Colors.prototype.getScheme = function(scheme) {
   return new StaticSchemeClass(color);
 };
 
-Colors.prototype.addStaticScheme = function(scheme,name) {
+Colors.prototype.addStaticScheme = function(name,scheme) {
   this.maps[name] = scheme;
 }
 
-Colors.prototype.addDynScheme = function(scheme,name) {
+Colors.prototype.addDynScheme = function(name,scheme) {
   this.dyn[name] = scheme;
 }
 

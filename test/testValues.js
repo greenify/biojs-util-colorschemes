@@ -28,7 +28,7 @@ describe('color schemes module', function(){
     });
 
     it('should allow schemes to be added', function(){
-      schemeMgr.addStaticScheme({B: "#bbb"},"bscheme")
+      schemeMgr.addStaticScheme("bscheme", {B: "#bbb"})
       var Clustal = schemeMgr.getScheme("bscheme");
       equal(Clustal.type, "static");
       equal(Clustal.getColor("B"), "#bbb");
@@ -38,7 +38,7 @@ describe('color schemes module', function(){
       var fun = function(letter,info){
         return info.pos % 2 == 0 ? "#ccc" : "#ddd";
       }
-      schemeMgr.addDynScheme(fun,"fscheme")
+      schemeMgr.addDynScheme("fscheme",fun)
 
       var scheme = schemeMgr.getScheme("fscheme")
       equal(scheme.type, "dyn");

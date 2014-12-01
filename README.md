@@ -36,20 +36,17 @@ Clustal.getColor("B")
 ### Add your own scheme
 
 ```
-schemeMgr.addStaticScheme({B: "#bbb"},"bscheme")
+schemeMgr.addStaticScheme("bscheme", {B: "#bbb"})
 schemeMgr.getScheme("bscheme").getColor("B")
 > "#bbb"
 ```
 
-
 ### Add a dynamic scheme
 
 ```
-// add dynamic schemes (might lead to performance decrease in same applications)
-var fun = function(letter,info){
+var fun = schemeMgr.addDynScheme("fscheme", function(letter,info){
 	return info.pos % 2 == 0 ? "#ccc" : "#ddd";
-}
-schemeMgr.addDynScheme(fun,"fscheme")
+})
 
 var scheme = schemeMgr.getScheme("dscheme")
 scheme.type
