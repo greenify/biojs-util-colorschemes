@@ -11,10 +11,18 @@ var StaticSchemeClass = function(map){
   }
 }
 
-var DynSchemeClass = function(fun){
+var DynSchemeClass = function(fun,opt){
   this.default = "#ffffff";
   this.type = "dyn";
-  this.getColor = fun;
+  this.opt = opt;
+  // init
+  if(fun.init != undefined){
+    fun.init.call(this);
+    this.getColor = fun.run;
+    this.reset = fun.init;
+  }else{
+    this.getColor = fun;
+  }
 }
 module.exports.stat = StaticSchemeClass;
 module.exports.dyn = DynSchemeClass;

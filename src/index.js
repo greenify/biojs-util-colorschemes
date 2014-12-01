@@ -45,9 +45,10 @@ var dynSchemes = {
   pid: pid,
 };
 
-module.exports = Colors = function(){
+module.exports = Colors = function(opt){
   this.maps = clone(staticSchemes);  
   this.dyn = clone(dynSchemes);
+  this.opt = opt;
 }
 Colors.getScheme = function(scheme){
   return staticSchemes[scheme];
@@ -57,7 +58,7 @@ Colors.prototype.getScheme = function(scheme) {
   if (color === undefined) {
     color = {};
     if(this.dyn[scheme] != undefined){
-      return new DynSchemeClass(this.dyn[scheme]);
+      return new DynSchemeClass(this.dyn[scheme],this.opt);
     }
   }
   return new StaticSchemeClass(color);
