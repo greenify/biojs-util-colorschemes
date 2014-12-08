@@ -1,6 +1,6 @@
 {
   "name": "biojs-util-colorschemes",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Color schemes for residues",
   "main": "./src/index.js",
   "scripts": {

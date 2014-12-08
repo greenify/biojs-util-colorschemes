@@ -36,13 +36,13 @@ var staticSchemes = {
   taylor: Taylor,
   turn: Turn,
   turn_propensity: Turn,
-  zappo: Zappo,
+  zappo: Zappo
 };
 
 var pid = require("./pid_colors.js");
 
 var dynSchemes = {
-  pid: pid,
+  pid: pid
 };
 
 module.exports = Colors = function(opt){
