@@ -24,7 +24,7 @@ describe('color schemes module', function(){
       var Clustal = schemeMgr.getScheme("clustal");
       equal(Clustal.getColor("B"), "#fff");
       equal(Clustal.type, "static");
-      equal(Clustal.defaultValue, "#ffffff");
+      equal(Clustal.defaultColor, "#ffffff");
     });
 
     it('should allow schemes to be added', function(){
