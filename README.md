@@ -1,21 +1,21 @@
-biojs-vis-colorschemes
+msa-colorschemes
 ======================
 
 A bundle of different biological color schemes.
 
-[![NPM version](http://img.shields.io/npm/v/biojs-stat-seqs.svg)](https://www.npmjs.org/package/biojs-stat-seqs) 
-[![Build Status](https://secure.travis-ci.org/greenify/biojs-stat-seqs.png?branch=master)](http://travis-ci.org/greenify/biojs-stat-seqs) 
+[![NPM version](http://img.shields.io/npm/v/msa-colorschemes.svg)](https://www.npmjs.org/package/msa-colorschemes) 
+[![Build Status](https://secure.travis-ci.org/greenify/msa-colorschemes.png?branch=master)](http://travis-ci.org/greenify/msa-colorschemes) 
 
 
 ```
-npm install biojs-vis-colorschemes --save
+npm install msa-colorschemes --save
 ```
 
 How to use
 ----------
 
 ```
-var schemes = require("biojs-vis-colorschemes");
+var schemes = require("msa-colorschemes");
 // pure mappings
 var Clustal = schemes.getScheme("clustal");
 > {A: "orange", B: "#fff", ...} 
